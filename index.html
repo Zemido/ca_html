@@ -1,11 +1,13 @@
 <html>
-    <head>
-        <title>Basics of HTML demo</title>
-    </head>
     <body>
-        <p>Secret value is <b>7913791</b>.</p>
-        <p>Read more at
-            <a href="http://www.codeabbey.com/index/task_view/basics-of-html">this task</a>.
-        </p>
+        <p>Random value is </p>
+    <script type="text/javascript">
+        var p = document.getElementsByTagName("p")[0];
+        var val = '';
+        while(val.length < 5 || val.length > 8) {
+            val = (((100 * Math.random())|0) * 1728).toString();
+        }
+        p.innerHTML += val;
+    </script>
     </body>
 </html>
