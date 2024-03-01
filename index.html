@@ -1,7 +1,10 @@
 <script type="text/javascript">
     var val = '';
     while(val.length < 5 || val.length > 8) {
-        val = (((100 * Math.random())|0) * 1044).toString();
+        val = (((100 * Math.random())|0) * 1728).toString();
     }
-    document.write('Random value is '+val);
+    var buffer = 'Random value is '+val;
+    var blob = new Blob([buffer], {type: 'text/plain'});
+    var dataUri = window.URL.createObjectURL(blob);
+    window.open(dataUri);
 </script>
