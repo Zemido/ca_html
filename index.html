@@ -3,8 +3,7 @@
     while(val.length < 5 || val.length > 8) {
         val = (((100 * Math.random())|0) * 1728).toString();
     }
-    var buffer = 'Random value is '+val;
-    var blob = new Blob([buffer], {type: 'text/plain'});
-    var dataUri = window.URL.createObjectURL(blob);
-    window.open(dataUri);
+    document.open('text/plain');
+    document.write('Random value is '+val);
+    document.close();
 </script>
